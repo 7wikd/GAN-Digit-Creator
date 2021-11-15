@@ -1,2 +1,10 @@
 # GAN-Digit-Creator
-GAN to generate Digits. Uses MNIST
+GAN to generate digits using the MNIST dataset
+
+Written in PyTorch
+
+For Tensorboard visualization:
+
+```python
+tensorboard --logdir logs
+```
