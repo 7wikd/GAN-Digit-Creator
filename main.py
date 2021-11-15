@@ -29,8 +29,8 @@ loader = DataLoader(dataset,batch_size=BATCH_SIZE,shuffle=True)
 opt_disc = optim.Adam(disc.parameters(),lr=LR)
 opt_gen = optim.Adam(gen.parameters(),lr=LR)
 bce_loss = nn.BCELoss()
-writer_fake = SummaryWriter(f"runs/logs/fake")
-writer_real = SummaryWriter(f"runs/logs/real")
+writer_fake = SummaryWriter(f"logs/fake")
+writer_real = SummaryWriter(f"logs/real")
 step = 0
 
 for e in range(NUM_EPOCHS):
