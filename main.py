@@ -42,7 +42,7 @@ for e in range(NUM_EPOCHS):
         fake = gen(noise)
 
         disc_real = disc(real).view(-1)
-        loss_disc_real = bce_loss(disc_real,torch.zeros_like(disc_real)) 
+        loss_disc_real = bce_loss(disc_real,torch.ones_like(disc_real)) 
         disc_fake = disc(fake).view(-1)
         loss_disc_fake = bce_loss(disc_fake,torch.zeros_like(disc_fake))
         loss_disc = (loss_disc_fake+loss_disc_real) / 2
